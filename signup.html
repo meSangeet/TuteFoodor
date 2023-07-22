@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<title> Signup and showing grid page</title>
+<style>
+    body{
+        display:grid;
+        grid-template-areas:
+        "header header header"
+        "nav article ads"
+        "nav footer footer";
+        grid-template-rows: 80px 1fr 70px;
+        grid-template-columns: 20% 1fr 30%;
+        grid-row-gap: 2px;
+        grid-column-gap: 2px;
+        height : 100vh;
+        margin:0;
+    }
+    header , nav, article , footer, div
+    {
+        padding: 1.2 em;
+        background: gold;
+
+    }
+    #pageHeader
+    {
+        grid-area: header;
+    }
+    #pageFooter
+    {
+        grid-area: footer; 
+    }
+    #mainArticle
+    {
+        grid-area: article;
+    }
+    #mainNav
+    {
+        grid-area: nav;
+    }
+    #siteAds
+    {
+        grid-area: ads;
+    }
+    @media all and (max-width: 575px)
+    {
+        body{
+            grid-template-areas:
+            "header" "article" "ads" "nav" "footer";
+            grid-template-rows: 80px 1fr 70px 1fr 70px;
+            grid-template-columns: 1fr;
+
+        }
+    }
+   /*talking about the font-family: 
+            If the font name is more than one word, it must be in quotation marks, like: "Times New Roman" */ 
+/* MARQUEE: provides the scrolling type in a marquee. That scrolling can be like sliding, scrolling or alternate*/
+</style>
+<body>
+    <header id="pageHeader">
+        <marquee behavior ="alternate" scrollamount: "10" direction:"right">
+            <p style="font-size:16px ; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color:brown">
+            Student Information System
+            </p>    
+        </marquee>
+</header>
+<article id="main Article">
+    <table align="center">
+        <tr>  
+            <td>User Name</td>
+            <td> <input type="text" id="userid" placeholder="User Name" required></td>
+        </tr>
+
+    </table>
+</article>
+
+</body>
